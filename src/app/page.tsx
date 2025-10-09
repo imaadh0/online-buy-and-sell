@@ -1,11 +1,11 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import GetStartedSection from "@/components/GetStartedSection";
 import BrandStrip from "@/components/BrandStrip";
 import HowCanWeHelpSection from "@/components/HowCanWeHelpSection";
+import OurMissionSection from "@/components/OurMissionSection";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <BrandStrip />
       <HowCanWeHelpSection />
       <HowItWorksSection />
-      <AboutSection />
+      <OurMissionSection />
       <ContactSection />
       <GetStartedSection />
     </div>
