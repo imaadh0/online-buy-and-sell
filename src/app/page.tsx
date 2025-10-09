@@ -1,12 +1,11 @@
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
-import ContactSection from "@/components/ContactSection";
-import GetStartedSection from "@/components/GetStartedSection";
 import BrandStrip from "@/components/BrandStrip";
 import HowCanWeHelpSection from "@/components/HowCanWeHelpSection";
 import OurMissionSection from "@/components/OurMissionSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,8 +17,7 @@ export default function Home() {
       <HowItWorksSection />
       <OurMissionSection />
       <TestimonialsSection />
-      <ContactSection />
-      <GetStartedSection />
+      <Footer />
     </div>
   );
 }

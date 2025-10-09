@@ -53,7 +53,7 @@ const HeroSection = () => {
                     element.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="bg-[radial-gradient(circle_at_center,#234C6A_0%,#0C769D_100%)] hover:bg-[radial-gradient(circle_at_center,#0C769D_0%,#234C6A_100%)] text-white font-bold px-8 sm:px-12 md:px-16 lg:px-20 py-3 sm:py-4 rounded-[10px] text-base sm:text-lg transition-all duration-300 hover:shadow-2xl focus:outline-none w-full sm:w-auto sm:min-w-[240px] md:min-w-[276px]"
+                className="bg-[radial-gradient(circle_at_center,#234C6A_0%,#0C769D_100%)] text-white font-bold px-8 sm:px-12 md:px-16 lg:px-20 py-3 sm:py-4 rounded-[10px] text-base sm:text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl focus:outline-none w-full sm:w-auto sm:min-w-[240px] md:min-w-[276px]"
               >
                 Start Now
               </button>
