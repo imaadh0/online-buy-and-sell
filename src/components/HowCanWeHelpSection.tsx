@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const HowCanWeHelpSection = () => {
   return (
-    <section className="bg-gray-100 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+    <section className="bg-[#E9E9E9] py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16">

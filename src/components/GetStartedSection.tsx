@@ -1,6 +1,6 @@
 const GetStartedSection = () => {
   return (
-    <section id="get-started" className="py-24 bg-[#F8F8F8]">
+    <section id="get-started" className="py-24 bg-[#E9E9E9]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800 text-center mb-8">
           Get Started
