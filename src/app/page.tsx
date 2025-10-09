@@ -5,6 +5,7 @@ import AboutSection from "@/components/AboutSection";
 import ContactSection from "@/components/ContactSection";
 import GetStartedSection from "@/components/GetStartedSection";
 import BrandStrip from "@/components/BrandStrip";
+import HowCanWeHelpSection from "@/components/HowCanWeHelpSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <BrandStrip />
+      <HowCanWeHelpSection />
       <HowItWorksSection />
       <AboutSection />
       <ContactSection />
