@@ -4,53 +4,48 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen bg-[#E9E9E9] flex items-center">
+    <section
+      id="home"
+      className="min-h-screen bg-[#E9E9E9] flex items-center py-12 md:py-0"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
           {/* Hero Image - mobile after text, desktop on right */}
-          <div className="order-2 lg:order-2 flex justify-center lg:justify-end mt-6 lg:mt-0">
-            <div className="relative w-full max-w-md lg:max-w-lg">
+          <div className="order-2 lg:order-2 flex justify-center lg:justify-end mt-6 sm:mt-0 lg:-mt-14">
+            <div className="relative w-full max-w-sm sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl">
               <Image
                 src="/hero-page/hero-girl.png"
                 alt="Happy woman with shopping bags"
-                width={500}
-                height={600}
-                className="w-full h-auto object-contain"
+                width={1200}
+                height={1440}
+                className="w-full h-auto object-contain object-top"
                 priority
               />
             </div>
           </div>
 
           {/* Hero Content - mobile first, desktop left */}
-          <div className="order-1 lg:order-1 space-y-6 lg:space-y-8 relative">
+          <div className="order-1 lg:order-1 space-y-4 sm:space-y-6 lg:space-y-8 relative">
             {/* Main Heading */}
-            <div className="space-y-2">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight">
-                <span className="text-gray-800">Buy & Sell</span>
-                <br />
-                <span className="bg-gradient-to-r from-[#234C6A] to-[#18B2EA] bg-clip-text text-transparent">
-                  Online With Confidence
-                </span>
-              </h1>
-            </div>
-
-            {/* Decorative Lines */}
-            <div className="flex items-center space-x-4">
-              <div className="w-8 h-0.5 bg-gray-300"></div>
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <div className="w-16 h-0.5 bg-gray-300"></div>
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-            </div>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-none">
+              <span className="bg-gradient-to-r from-[#234C6A] to-[#18B2EA] bg-clip-text text-transparent">
+                Buy & Sell Online
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-[#234C6A] to-[#18B2EA] bg-clip-text text-transparent">
+                With Confidence
+              </span>
+            </h1>
 
             {/* Description */}
-            <p className="text-gray-600 text-lg sm:text-xl leading-relaxed max-w-2xl">
+            <p className="text-gray-600 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
               We help you shop and sell safely on Amazon, eBay, Temu, and more.
               Perfect for first-time shoppers and anyone who wants expert
               guidance.
             </p>
 
             {/* Call to Action Button */}
-            <div className="pt-4">
+            <div className="pt-2 sm:pt-4">
               <button
                 onClick={() => {
                   const element = document.getElementById("get-started");
@@ -58,14 +53,22 @@ const HeroSection = () => {
                     element.scrollIntoView({ behavior: "smooth" });
                   }
                 }}
-                className="bg-gradient-to-r from-[#18B2EA] to-[#0F8BC2] hover:from-[#0F8BC2] hover:to-[#0A6B96] text-white font-semibold px-8 py-4 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-200"
+                className="bg-[radial-gradient(circle_at_center,#234C6A_0%,#0C769D_100%)] hover:bg-[radial-gradient(circle_at_center,#0C769D_0%,#234C6A_100%)] text-white font-bold px-8 sm:px-12 md:px-16 lg:px-20 py-3 sm:py-4 rounded-[10px] text-base sm:text-lg transition-all duration-300 hover:shadow-2xl focus:outline-none w-full sm:w-auto sm:min-w-[240px] md:min-w-[276px]"
               >
                 Start Now
               </button>
             </div>
 
-            {/* Subtle Background Circle */}
-            <div className="absolute -z-10 w-64 h-64 bg-gray-200 rounded-full opacity-20 -left-32 top-1/2 transform -translate-y-1/2 hidden lg:block"></div>
+            {/* Marketing Logo */}
+            <div className="absolute w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 right-2 sm:right-4 top-3/4 transform -translate-y-1/2 hidden md:block z-10">
+              <Image
+                src="/hero-page/marketing-logo.png"
+                alt="Marketing Logo"
+                width={128}
+                height={128}
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         </div>
       </div>
