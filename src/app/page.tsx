@@ -6,6 +6,7 @@ import GetStartedSection from "@/components/GetStartedSection";
 import BrandStrip from "@/components/BrandStrip";
 import HowCanWeHelpSection from "@/components/HowCanWeHelpSection";
 import OurMissionSection from "@/components/OurMissionSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <HowCanWeHelpSection />
       <HowItWorksSection />
       <OurMissionSection />
+      <TestimonialsSection />
       <ContactSection />
       <GetStartedSection />
     </div>
