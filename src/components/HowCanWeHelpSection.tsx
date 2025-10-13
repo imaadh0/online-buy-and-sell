@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const HowCanWeHelpSection = () => {
   return (
@@ -35,9 +36,11 @@ const HowCanWeHelpSection = () => {
                 Send us item details or a link, we'll find the best deal and
                 order for you
               </p>
-              <button className="bg-[#234C6A] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-semibold hover:bg-[#1a3a52] transition-all duration-300 w-full sm:max-w-xs md:max-w-sm lg:max-w-md hover:scale-105 hover:shadow-lg group-hover:shadow-xl">
-                I want to buy
-              </button>
+              <Link href="/buy">
+                <button className="bg-[#234C6A] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-semibold hover:bg-[#1a3a52] transition-all duration-300 w-full sm:max-w-xs md:max-w-sm lg:max-w-md hover:scale-105 hover:shadow-lg group-hover:shadow-xl">
+                  I want to buy
+                </button>
+              </Link>
             </div>
           </div>
 
