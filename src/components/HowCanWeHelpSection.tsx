@@ -63,9 +63,11 @@ const HowCanWeHelpSection = () => {
                 Upload photos and details, we'll list your item and help you get
                 paid
               </p>
-              <button className="bg-[#234C6A] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-semibold hover:bg-[#1a3a52] transition-all duration-300 w-full sm:max-w-xs md:max-w-sm lg:max-w-md hover:scale-105 hover:shadow-lg group-hover:shadow-xl">
-                Start selling
-              </button>
+              <Link href="/sell">
+                <button className="bg-[#234C6A] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-2xl font-semibold hover:bg-[#1a3a52] transition-all duration-300 w-full sm:max-w-xs md:max-w-sm lg:max-w-md hover:scale-105 hover:shadow-lg group-hover:shadow-xl">
+                  Start selling
+                </button>
+              </Link>
             </div>
           </div>
         </div>
