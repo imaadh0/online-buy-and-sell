@@ -45,10 +45,11 @@ export default function SellPage() {
         {/* Title and Instructions */}
         <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl font-bold text-[#234C6A] mb-4">
-            Tell Us about your Item
+            Tell Us What You Want to Sell
           </h2>
           <p className="text-gray-600 text-lg">
-            Fill out the details below and we'll find the best deals for you
+            Fill out the details below and we'll help you list and sell your
+            item
           </p>
         </div>
 
