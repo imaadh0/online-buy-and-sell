@@ -106,32 +106,49 @@ const HeroSection = () => {
       </div>
 
       {/* Brand Strip - integrated at bottom */}
-      <div className="bg-[#21597A] py-4 sm:py-5 md:py-6 overflow-hidden -mt-8 sm:-mt-6 md:-mt-16 lg:-mt-20 xl:-mt-20">
-        <div className="overflow-hidden w-full">
-          <div className="flex w-fit animate-scroll">
-            {brands.map((brand, index) => (
-              <Image
-                key={`brand-${index}`}
-                src={brand.src}
-                alt={brand.alt}
-                width={brand.width}
-                height={brand.height}
-                className="h-7 sm:h-8 md:h-9 lg:h-10 w-auto opacity-95 flex-shrink-0 mr-12 sm:mr-16 md:mr-20 lg:mr-24 xl:mr-32"
-              />
-            ))}
-            {brands.map((brand, index) => (
-              <Image
-                key={`brand-duplicate-${index}`}
-                src={brand.src}
-                alt={brand.alt}
-                width={brand.width}
-                height={brand.height}
-                className="h-7 sm:h-8 md:h-9 lg:h-10 w-auto opacity-95 flex-shrink-0 mr-12 sm:mr-16 md:mr-20 lg:mr-24 xl:mr-32"
-              />
-            ))}
-          </div>
-        </div>
+      {/* Brand Strip - seamless, no jumps */}
+<div className="bg-[#21597A] py-4 sm:py-5 md:py-6 overflow-hidden -mt-8 sm:-mt-6 md:-mt-16 lg:-mt-20 xl:-mt-20">
+  <div className="relative w-full overflow-hidden">
+    {/* Track is exactly 200% width; slides left by 50% */}
+    <div className="marquee-track flex w-[200%]">
+      {/* Group A (50% of track == 100% of viewport) */}
+      <div className="flex basis-1/2 shrink-0 items-center gap-x-12 sm:gap-x-16 md:gap-x-20 lg:gap-x-24 xl:gap-x-32">
+        {brands.map((brand, i) => (
+          <Image
+            key={`brand-a-${i}`}
+            src={brand.src}
+            alt={brand.alt}
+            width={brand.width}
+            height={brand.height}
+            className="block h-7 sm:h-8 md:h-9 lg:h-10 w-auto opacity-95 shrink-0"
+            draggable={false}
+            priority={i < 3}
+          />
+        ))}
+        {/* trailing spacer so seam has the same gap */}
+        <div className="shrink-0 w-12 sm:w-16 md:w-20 lg:w-24 xl:w-32" />
       </div>
+
+      {/* Group B: exact duplicate (also 50%) */}
+      <div className="flex basis-1/2 shrink-0 items-center gap-x-12 sm:gap-x-16 md:gap-x-20 lg:gap-x-24 xl:gap-x-32" aria-hidden="true">
+        {brands.map((brand, i) => (
+          <Image
+            key={`brand-b-${i}`}
+            src={brand.src}
+            alt={brand.alt}
+            width={brand.width}
+            height={brand.height}
+            className="block h-7 sm:h-8 md:h-9 lg:h-10 w-auto opacity-95 shrink-0"
+            draggable={false}
+          />
+        ))}
+        {/* trailing spacer to mirror Group A */}
+        <div className="shrink-0 w-12 sm:w-16 md:w-20 lg:w-24 xl:w-32" />
+      </div>
+    </div>
+  </div>
+</div>
+
     </section>
   );
 };
