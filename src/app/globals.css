@@ -63,28 +63,30 @@ html {
   background-clip: text;
 }
 
-/* Carousel animation */
+/* Smooth infinite scroll animation for logo strip */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-400%);
   }
 }
 
 .animate-scroll {
-  animation: scroll 10s linear infinite;
+  animation: scroll 35s linear infinite;
 }
 
-/* seamless marquee: slide the 200%-wide track by exactly 50% */
-@keyframes marquee-x {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* Faster on tablet */
+@media (min-width: 768px) {
+  .animate-scroll {
+    animation: scroll 40s linear infinite;
+  }
 }
-.marquee-track {
-  animation: marquee-x 32s linear infinite;
-  will-change: transform;
+
+/* Normal speed on desktop */
+@media (min-width: 1024px) {
+  .animate-scroll {
+    animation: scroll 120s linear infinite;
+  }
 }
-@media (min-width: 768px) { .marquee-track { animation-duration: 40s; } }
-@media (min-width: 1024px){ .marquee-track { animation-duration: 48s; } }
